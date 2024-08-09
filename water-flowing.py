@@ -56,6 +56,9 @@ def find_path(input, i, j, visited, ans):
             is_steepest = check_steepest(input, i + dy, j + dx, steepness)
             if is_steepest:
                 find_path(input, i + dy, j + dx, visited, ans)
+                # we update ans after the recursive call
+                # so that the values at the bottom nodes of the call tree are updated first
+                # then the root value gets its value update from the values of the downstream nodes
                 ans[i][j] += ans[i + dy][j + dx]
                 ans[i + dy][j + dx] = 0
 
