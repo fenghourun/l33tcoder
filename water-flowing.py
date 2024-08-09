@@ -2,11 +2,10 @@
 # given a 2D map of elevation return a 2D grid
 # indicator how many units of water has pooled in each cell
 
-# Water moves to the adjascent cell with the steepest elevation
-# tie breaks in any way
+# Water moves to the adjacent cell with the steepest elevation
+# tie breaks in any way (there's a few options for tie breaks leave up to interviewer to decide)
 
 # Example
-
 test_cases = [
     ([[2, 5, 1]], [[1, 0, 2]]),
     ([[1, 5, 2]], [[2, 0, 1]]),
